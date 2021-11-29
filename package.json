@@ -1,0 +1,26 @@
+{
+  "name": "dices",
+  "version": "1.0.0",
+  "description": "Main structure of node.js project. Folders / files:",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscarvargas4/sprinte4-dices.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oscarvargas4/sprinte4-dices/issues"
+  },
+  "homepage": "https://github.com/oscarvargas4/sprinte4-dices#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.12.0-alpha.1"
+  }
+}
