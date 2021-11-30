@@ -17,12 +17,14 @@ app.get('/', function (req, res) {
 });
 
 app.use('/api/posts', require('./routes/posts'));
+app.use('/api/users', require('./routes/users'));
 
 // Server running
 app.listen(3000, function() {
   console.log(`App runining on http://localhost:${PORT}`);
 
   // DB connection
+  // Force: true -> DROP TABLES
   sequelize.sync({ force: false }).then(() => { // Creates a new table if does not exists and doesn't drop any already existed
     console.log('Database connection successful');
   }).catch((error) => {

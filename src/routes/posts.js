@@ -1,7 +1,7 @@
 const express = require("express");
-const { findByPk } = require("../database/models/Post");
+const { findByPk } = require("../models/Post");
 const router = express.Router();
-const Post = require("../database/models/Post");
+const Post = require("../models/Post");
 
 // List all posts
 router.get("/", (req, res) => {
