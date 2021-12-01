@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const sequelize = require('./database/db');
+require('./models/associations');
 
 // Setting
 const PORT = process.env.PORT || 3000;
@@ -16,8 +17,10 @@ app.get('/', function (req, res) {
   res.json('Home Page');
 });
 
+// Routers
 app.use('/api/posts', require('./routes/posts'));
 app.use('/api/users', require('./routes/users'));
+app.use('/api/addresses', require('./routes/adresses'));
 
 // Server running
 app.listen(3000, function() {
