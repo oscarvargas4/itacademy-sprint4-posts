@@ -2,10 +2,17 @@ const express = require("express");
 const { findByPk } = require("../models/Post");
 const router = express.Router();
 const Post = require("../models/Post");
+const User = require("../models/User");
 
 // List all posts
 router.get("/", (req, res) => {
-  Post.findAll()
+  Post.findAll({
+    include: {
+      model: User,
+      attributes: ['name']
+    },
+    attributes: ['title', 'body']
+  })
     .then((posts) => {
       res.json(posts);
     })
